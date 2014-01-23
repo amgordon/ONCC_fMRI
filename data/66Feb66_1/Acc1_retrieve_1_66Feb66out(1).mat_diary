@@ -1,0 +1,2654 @@
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('GetClicks', '/Applications/Psychtoolbox/PsychBasic/GetClicks.m', 93)" style="font-weight:bold">GetClicks</a> (<a href="matlab: opentoline('/Applications/Psychtoolbox/PsychBasic/GetClicks.m',93,0)">line 93</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('ON_picTest', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/ON_picTest.m', 206)" style="font-weight:bold">ON_picTest</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/ON_picTest.m',206,0)">line 206</a>)
+        [resp, mouseX, mouseY] = GetClicks(S.Window);
+
+In <a href="matlab:helpUtils.errorDocCallback('ONRMrun', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/ONRMrun.m', 123)" style="font-weight:bold">ONRMrun</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/ONRMrun.m',123,0)">line 123</a>)
+    ONTestData(1) = ON_picTest(thePath,listName,sName,sNum,1, S);
+} 
+<a href="matlab: opentoline('/Applications/Psychtoolbox/PsychBasic/GetClicks.m',93,1)">93  </a>    if (nice>0), WaitSecs('YieldSecs', rtwait); end;
+gg
+{Undefined function or variable 'gg'.
+} 
+
+sca
+
+
+PTB-INFO: There are still 600 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 8 times out of a total of 646 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+sca
+if system_dependent('IsDebugMode')==1, dbquit; end
+edit RMListMaker.m
+edit LocListMaker.m
+nReps = 8;
+ListTypes = {[1 2 1 3] [1 3 1 2] [2 1 3 1] [3 1 2 1]};
+for l=1:length(ListTypes)
+   condOrder{l} = repmat(ListTypes{l},1,nReps); 
+end
+
+condOrder
+
+condOrder = 
+
+    [1x32 double]    [1x32 double]    [1x32 double]    [1x32 double]
+
+condOrder{1}
+
+ans =
+
+  Columns 1 through 14
+
+     1     2     1     3     1     2     1     3     1     2     1     3     1     2
+
+  Columns 15 through 28
+
+     1     3     1     2     1     3     1     2     1     3     1     2     1     3
+
+  Columns 29 through 32
+
+     1     2     1     3
+
+cd ../
+cd ../stim/
+condOrder
+
+condOrder = 
+
+    [1x32 double]    [1x32 double]    [1x32 double]    [1x32 double]
+
+condOrder = []
+
+condOrder =
+
+     []
+
+nCycles = 4;
+nReps = 10;
+numLists = 16;
+ListTypes = {[1 2 1 3] [1 3 1 2] [2 1 3 1] [3 1 2 1]};
+
+for l=1:length(ListTypes)
+    condOrder{l} = [];
+    for j=1:length(ListTypes{i})
+       thisMB = repmat(ListType{i}(j), 1, nReps);
+       condOrder{l} = [condOrder{l} thisMB];
+    end
+end
+{Index exceeds matrix dimensions.
+} 
+i
+
+i =
+
+     8
+
+for l=1:length(ListTypes)
+    condOrder{l} = [];
+    for j=1:length(ListTypes{l})
+       thisMB = repmat(ListType{i}(j), 1, nReps);
+       condOrder{l} = [condOrder{l} thisMB];
+    end
+end
+{Undefined variable "ListType" or class "ListType".
+} 
+for l=1:length(ListTypes)
+    condOrder{l} = [];
+    for j=1:length(ListTypes{l})
+       thisMB = repmat(ListTypes{i}(j), 1, nReps);
+       condOrder{l} = [condOrder{l} thisMB];
+    end
+end
+{Index exceeds matrix dimensions.
+} 
+LocListMaker
+{Index exceeds matrix dimensions.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 9)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',9,0)">line 9</a>)
+       thisMB = repmat(ListTypes{i}(j), 1, nReps);
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',9,1)">9   </a>       thisMB = repmat(ListTypes{i}(j), 1, nReps);
+repmat(ListTypes{i}(j), 1, nReps)
+{Index exceeds matrix dimensions.
+} 
+for l=1:length(ListTypes)
+    condOrder{l} = [];
+    for j=1:length(ListTypes{l})
+       thisMB = repmat(ListTypes{l}(j), 1, nReps);
+       condOrder{l} = [condOrder{l} thisMB];
+    end
+end
+condOrder
+
+condOrder = 
+
+    [1x40 double]    [1x40 double]    [1x40 double]    [1x40 double]
+
+condOrder{1}
+
+ans =
+
+  Columns 1 through 14
+
+     1     1     1     1     1     1     1     1     1     1     2     2     2     2
+
+  Columns 15 through 28
+
+     2     2     2     2     2     2     1     1     1     1     1     1     1     1
+
+  Columns 29 through 40
+
+     1     1     3     3     3     3     3     3     3     3     3     3
+
+nCycles = 4;
+nReps = 10;
+numLists = 16;
+ListTypes = {[1 2 1 3] [1 3 1 2] [2 1 3 1] [3 1 2 1]};
+
+for l=1:length(ListTypes)
+    condOrder{l} = [];
+    for j=1:length(ListTypes{l})
+       thisMB = repmat(ListTypes{l}(j), 1, nReps);
+       condOrder{l} = [condOrder{l} thisMB];
+    end
+end
+condOrder
+
+condOrder = 
+
+    [1x40 double]    [1x40 double]    [1x40 double]    [1x40 double]
+
+condOrder{1}
+
+ans =
+
+  Columns 1 through 14
+
+     1     1     1     1     1     1     1     1     1     1     2     2     2     2
+
+  Columns 15 through 28
+
+     2     2     2     2     2     2     1     1     1     1     1     1     1     1
+
+  Columns 29 through 40
+
+     1     1     3     3     3     3     3     3     3     3     3     3
+
+LocListMaker
+{Undefined function or variable 'cycleLength'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 11)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',11,0)">line 11</a>)
+condOrder = NaN(size(nCycles*nReps*cycleLength));
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',11,1)">11  </a>condOrder = NaN(size(nCycles*nReps*cycleLength));
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',18,1)">18  </a>allObjects_h = dir(fullfile(thePath.stim, 'objects'));
+condOrder
+
+condOrder =
+
+  Columns 1 through 14
+
+   NaN     1     1     1     1     2     2     2     2     1     1     1     1     3
+
+  Columns 15 through 28
+
+     3     3     3     1     1     1     1     2     2     2     2     1     1     1
+
+  Columns 29 through 42
+
+     1     3     3     3     3     1     1     1     1     2     2     2     2     1
+
+  Columns 43 through 56
+
+     1     1     1     3     3     3     3     1     1     1     1     2     2     2
+
+  Columns 57 through 70
+
+     2     1     1     1     1     3     3     3     3     1     1     1     1     2
+
+  Columns 71 through 84
+
+     2     2     2     1     1     1     1     3     3     3     3     1     1     1
+
+  Columns 85 through 98
+
+     1     2     2     2     2     1     1     1     1     3     3     3     3     1
+
+  Columns 99 through 112
+
+     1     1     1     2     2     2     2     1     1     1     1     3     3     3
+
+  Columns 113 through 126
+
+     3     1     1     1     1     2     2     2     2     1     1     1     1     3
+
+  Columns 127 through 140
+
+     3     3     3     1     1     1     1     2     2     2     2     1     1     1
+
+  Columns 141 through 154
+
+     1     3     3     3     3     1     1     1     1     2     2     2     2     1
+
+  Columns 155 through 161
+
+     1     1     1     3     3     3     3
+
+160*4
+
+ans =
+
+   640
+
+640/60
+
+ans =
+
+   10.6667
+
+condOrder
+
+condOrder =
+
+  Columns 1 through 14
+
+   NaN     1     1     1     1     2     2     2     2     1     1     1     1     3
+
+  Columns 15 through 28
+
+     3     3     3     1     1     1     1     2     2     2     2     1     1     1
+
+  Columns 29 through 42
+
+     1     3     3     3     3     1     1     1     1     2     2     2     2     1
+
+  Columns 43 through 56
+
+     1     1     1     3     3     3     3     1     1     1     1     2     2     2
+
+  Columns 57 through 70
+
+     2     1     1     1     1     3     3     3     3     1     1     1     1     2
+
+  Columns 71 through 84
+
+     2     2     2     1     1     1     1     3     3     3     3     1     1     1
+
+  Columns 85 through 98
+
+     1     2     2     2     2     1     1     1     1     3     3     3     3     1
+
+  Columns 99 through 112
+
+     1     1     1     2     2     2     2     1     1     1     1     3     3     3
+
+  Columns 113 through 126
+
+     3     1     1     1     1     2     2     2     2     1     1     1     1     3
+
+  Columns 127 through 140
+
+     3     3     3     1     1     1     1     2     2     2     2     1     1     1
+
+  Columns 141 through 154
+
+     1     3     3     3     3     1     1     1     1     2     2     2     2     1
+
+  Columns 155 through 161
+
+     1     1     1     3     3     3     3
+
+condOrder==1
+
+ans =
+
+  Columns 1 through 14
+
+     0     1     1     1     1     0     0     0     0     1     1     1     1     0
+
+  Columns 15 through 28
+
+     0     0     0     1     1     1     1     0     0     0     0     1     1     1
+
+  Columns 29 through 42
+
+     1     0     0     0     0     1     1     1     1     0     0     0     0     1
+
+  Columns 43 through 56
+
+     1     1     1     0     0     0     0     1     1     1     1     0     0     0
+
+  Columns 57 through 70
+
+     0     1     1     1     1     0     0     0     0     1     1     1     1     0
+
+  Columns 71 through 84
+
+     0     0     0     1     1     1     1     0     0     0     0     1     1     1
+
+  Columns 85 through 98
+
+     1     0     0     0     0     1     1     1     1     0     0     0     0     1
+
+  Columns 99 through 112
+
+     1     1     1     0     0     0     0     1     1     1     1     0     0     0
+
+  Columns 113 through 126
+
+     0     1     1     1     1     0     0     0     0     1     1     1     1     0
+
+  Columns 127 through 140
+
+     0     0     0     1     1     1     1     0     0     0     0     1     1     1
+
+  Columns 141 through 154
+
+     1     0     0     0     0     1     1     1     1     0     0     0     0     1
+
+  Columns 155 through 161
+
+     1     1     1     0     0     0     0
+
+sum(condOrder==1)
+
+ans =
+
+    80
+
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',18,1)">18  </a>allObjects_h = dir(fullfile(thePath.stim, 'objects'));
+condOrder
+
+condOrder =
+
+  Columns 1 through 14
+
+     1     1     1     1     2     2     2     2     1     1     1     1     3     3
+
+  Columns 15 through 28
+
+     3     3     1     1     1     1     2     2     2     2     1     1     1     1
+
+  Columns 29 through 42
+
+     3     3     3     3     1     1     1     1     2     2     2     2     1     1
+
+  Columns 43 through 56
+
+     1     1     3     3     3     3     1     1     1     1     2     2     2     2
+
+  Columns 57 through 70
+
+     1     1     1     1     3     3     3     3     1     1     1     1     2     2
+
+  Columns 71 through 80
+
+     2     2     1     1     1     1     3     3     3     3
+
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',34,1)">34  </a>imgs;
+imgs
+
+imgs = 
+
+  Columns 1 through 5
+
+    'scene0644.jpg'    'scene0845.jpg'    'scene0623.jpg'    'scene0794.jpg'    []
+
+  Columns 6 through 11
+
+    []    []    []    'face0128.jpg'    'face0118.jpg'    'face0001.jpg'
+
+  Columns 12 through 18
+
+    'face0098.jpg'    []    []    []    []    'scene0829.jpg'    'scene0841.jpg'
+
+  Columns 19 through 25
+
+    'scene0803.jpg'    'scene0895.jpg'    []    []    []    []    'object0017.jpg'
+
+  Columns 26 through 32
+
+    'object0143.jpg'    'object0094.jpg'    'object0023.jpg'    []    []    []    []
+
+  Columns 33 through 37
+
+    'scene0710.jpg'    'scene0885.jpg'    'scene0826.jpg'    'scene0627.jpg'    []
+
+  Columns 38 through 43
+
+    []    []    []    'face0148.jpg'    'face0179.jpg'    'face0183.jpg'
+
+  Columns 44 through 50
+
+    'face0169.jpg'    []    []    []    []    'scene0736.jpg'    'scene0855.jpg'
+
+  Columns 51 through 57
+
+    'scene0913.jpg'    'scene0741.jpg'    []    []    []    []    'object0028.jpg'
+
+  Columns 58 through 64
+
+    'object0154.jpg'    'object0136.jpg'    'object0041.jpg'    []    []    []    []
+
+  Columns 65 through 69
+
+    'scene0801.jpg'    'scene0786.jpg'    'scene0620.jpg'    'scene0868.jpg'    []
+
+  Columns 70 through 75
+
+    []    []    []    'face0073.jpg'    'face0149.jpg'    'face0102.jpg'
+
+  Columns 76 through 82
+
+    'face0087.jpg'    []    []    []    []    'scene0903.jpg'    'scene0809.jpg'
+
+  Columns 83 through 89
+
+    'scene0816.jpg'    'scene0743.jpg'    []    []    []    []    'object0001.jpg'
+
+  Columns 90 through 96
+
+    'object0148.jpg'    'object0079.jpg'    'object0128.jpg'    []    []    []    []
+
+  Columns 97 through 101
+
+    'scene0808.jpg'    'scene0754.jpg'    'scene0812.jpg'    'scene0815.jpg'    []
+
+  Columns 102 through 107
+
+    []    []    []    'face0108.jpg'    'face0167.jpg'    'face0007.jpg'
+
+  Columns 108 through 114
+
+    'face0194.jpg'    []    []    []    []    'scene0672.jpg'    'scene0658.jpg'
+
+  Columns 115 through 121
+
+    'scene0825.jpg'    'scene0612.jpg'    []    []    []    []    'object0031.jpg'
+
+  Columns 122 through 128
+
+    'object0051.jpg'    'object0107.jpg'    'object0020.jpg'    []    []    []    []
+
+  Columns 129 through 133
+
+    'scene0865.jpg'    'scene0664.jpg'    'scene0713.jpg'    'scene0887.jpg'    []
+
+  Columns 134 through 139
+
+    []    []    []    'face0038.jpg'    'face0039.jpg'    'face0014.jpg'
+
+  Columns 140 through 146
+
+    'face0027.jpg'    []    []    []    []    'scene0834.jpg'    'scene0921.jpg'
+
+  Columns 147 through 153
+
+    'scene0760.jpg'    'scene0729.jpg'    []    []    []    []    'object0152.jpg'
+
+  Columns 154 through 158
+
+    'object0074.jpg'    'object0068.jpg'    'object0064.jpg'    []    []
+
+imgs'
+
+ans = 
+
+    'scene0644.jpg'
+    'scene0845.jpg'
+    'scene0623.jpg'
+    'scene0794.jpg'
+    []
+    []
+    []
+    []
+    'face0128.jpg'
+    'face0118.jpg'
+    'face0001.jpg'
+    'face0098.jpg'
+    []
+    []
+    []
+    []
+    'scene0829.jpg'
+    'scene0841.jpg'
+    'scene0803.jpg'
+    'scene0895.jpg'
+    []
+    []
+    []
+    []
+    'object0017.jpg'
+    'object0143.jpg'
+    'object0094.jpg'
+    'object0023.jpg'
+    []
+    []
+    []
+    []
+    'scene0710.jpg'
+    'scene0885.jpg'
+    'scene0826.jpg'
+    'scene0627.jpg'
+    []
+    []
+    []
+    []
+    'face0148.jpg'
+    'face0179.jpg'
+    'face0183.jpg'
+    'face0169.jpg'
+    []
+    []
+    []
+    []
+    'scene0736.jpg'
+    'scene0855.jpg'
+    'scene0913.jpg'
+    'scene0741.jpg'
+    []
+    []
+    []
+    []
+    'object0028.jpg'
+    'object0154.jpg'
+    'object0136.jpg'
+    'object0041.jpg'
+    []
+    []
+    []
+    []
+    'scene0801.jpg'
+    'scene0786.jpg'
+    'scene0620.jpg'
+    'scene0868.jpg'
+    []
+    []
+    []
+    []
+    'face0073.jpg'
+    'face0149.jpg'
+    'face0102.jpg'
+    'face0087.jpg'
+    []
+    []
+    []
+    []
+    'scene0903.jpg'
+    'scene0809.jpg'
+    'scene0816.jpg'
+    'scene0743.jpg'
+    []
+    []
+    []
+    []
+    'object0001.jpg'
+    'object0148.jpg'
+    'object0079.jpg'
+    'object0128.jpg'
+    []
+    []
+    []
+    []
+    'scene0808.jpg'
+    'scene0754.jpg'
+    'scene0812.jpg'
+    'scene0815.jpg'
+    []
+    []
+    []
+    []
+    'face0108.jpg'
+    'face0167.jpg'
+    'face0007.jpg'
+    'face0194.jpg'
+    []
+    []
+    []
+    []
+    'scene0672.jpg'
+    'scene0658.jpg'
+    'scene0825.jpg'
+    'scene0612.jpg'
+    []
+    []
+    []
+    []
+    'object0031.jpg'
+    'object0051.jpg'
+    'object0107.jpg'
+    'object0020.jpg'
+    []
+    []
+    []
+    []
+    'scene0865.jpg'
+    'scene0664.jpg'
+    'scene0713.jpg'
+    'scene0887.jpg'
+    []
+    []
+    []
+    []
+    'face0038.jpg'
+    'face0039.jpg'
+    'face0014.jpg'
+    'face0027.jpg'
+    []
+    []
+    []
+    []
+    'scene0834.jpg'
+    'scene0921.jpg'
+    'scene0760.jpg'
+    'scene0729.jpg'
+    []
+    []
+    []
+    []
+    'object0152.jpg'
+    'object0074.jpg'
+    'object0068.jpg'
+    'object0064.jpg'
+    []
+    []
+
+LocListMaker
+{The right hand side of this assignment has too few values to satisfy
+ the left hand side.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 30)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,0)">line 30</a>)
+imgs{condOrder==1} = 'blank.jpg';
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,1)">30  </a>imgs{condOrder==1} = 'blank.jpg';
+imgs{condOrder==0} = 'blank.jpg';
+{The right hand side of this assignment has too few values to satisfy
+ the left hand side.
+} 
+imgs(condOrder==0) = 'blank.jpg';
+{Conversion to cell from char is not possible.
+} 
+imgs
+
+imgs = 
+
+  Columns 1 through 14
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 15 through 28
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 29 through 42
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 43 through 56
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 57 through 70
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 71 through 84
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 85 through 98
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 99 through 112
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 113 through 126
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 127 through 140
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 141 through 154
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 155 through 158
+
+    []    []    []    []
+
+LocListMaker
+{The right hand side of this assignment has too few values to satisfy
+ the left hand side.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 30)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,0)">line 30</a>)
+imgs{condOrder==0} = 'blank.jpg';
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,1)">30  </a>imgs{condOrder==0} = 'blank.jpg';
+LocListMaker
+{Conversion to cell from char is not possible.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 30)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,0)">line 30</a>)
+imgs(condOrder==0) = 'blank.jpg';
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,1)">30  </a>imgs(condOrder==0) = 'blank.jpg';
+imgs(condOrder==0) = 'blank.jpg';
+{Conversion to cell from char is not possible.
+} 
+imgs(condOrder==0) = {'blank.jpg'};
+imgs
+
+imgs = 
+
+  Columns 1 through 8
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 9 through 16
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 17 through 24
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 25 through 32
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 33 through 40
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 41 through 48
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 49 through 56
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 57 through 64
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 65 through 72
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 73 through 80
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 81 through 88
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 89 through 96
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 97 through 104
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 105 through 112
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 113 through 120
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 121 through 128
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 129 through 136
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 137 through 144
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 145 through 152
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 153 through 158
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'
+
+imgs'
+
+ans = 
+
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    []
+    []
+    []
+    []
+    'blank.jpg'
+    'blank.jpg'
+
+allScenes(1:sum(condOrder==1))
+
+ans = 
+
+  Columns 1 through 4
+
+    'scene0709.jpg'    'scene0883.jpg'    'scene0632.jpg'    'scene0833.jpg'
+
+  Columns 5 through 8
+
+    'scene0720.jpg'    'scene0678.jpg'    'scene0829.jpg'    'scene0908.jpg'
+
+  Columns 9 through 12
+
+    'scene0602.jpg'    'scene0921.jpg'    'scene0623.jpg'    'scene0756.jpg'
+
+  Columns 13 through 16
+
+    'scene0772.jpg'    'scene0851.jpg'    'scene0918.jpg'    'scene0859.jpg'
+
+  Columns 17 through 20
+
+    'scene0820.jpg'    'scene0608.jpg'    'scene0804.jpg'    'scene0876.jpg'
+
+  Columns 21 through 24
+
+    'scene0655.jpg'    'scene0677.jpg'    'scene0610.jpg'    'scene0614.jpg'
+
+  Columns 25 through 28
+
+    'scene0754.jpg'    'scene0699.jpg'    'scene0902.jpg'    'scene0786.jpg'
+
+  Columns 29 through 32
+
+    'scene0899.jpg'    'scene0613.jpg'    'scene0638.jpg'    'scene0669.jpg'
+
+  Columns 33 through 36
+
+    'scene0824.jpg'    'scene0894.jpg'    'scene0721.jpg'    'scene0773.jpg'
+
+  Columns 37 through 40
+
+    'scene0890.jpg'    'scene0607.jpg'    'scene0658.jpg'    'scene0776.jpg'
+
+imgs(condOrder==1) = allScenes(1:sum(condOrder==1));
+imgs
+
+imgs = 
+
+  Columns 1 through 4
+
+    'scene0709.jpg'    'scene0883.jpg'    'scene0632.jpg'    'scene0833.jpg'
+
+  Columns 5 through 12
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []
+
+  Columns 13 through 17
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'scene0720.jpg'
+
+  Columns 18 through 21
+
+    'scene0678.jpg'    'scene0829.jpg'    'scene0908.jpg'    'blank.jpg'
+
+  Columns 22 through 29
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []    'blank.jpg'
+
+  Columns 30 through 34
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'scene0602.jpg'    'scene0921.jpg'
+
+  Columns 35 through 39
+
+    'scene0623.jpg'    'scene0756.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 40 through 47
+
+    'blank.jpg'    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 48 through 51
+
+    'blank.jpg'    'scene0772.jpg'    'scene0851.jpg'    'scene0918.jpg'
+
+  Columns 52 through 56
+
+    'scene0859.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 57 through 64
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 65 through 68
+
+    'scene0820.jpg'    'scene0608.jpg'    'scene0804.jpg'    'scene0876.jpg'
+
+  Columns 69 through 76
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []
+
+  Columns 77 through 81
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'scene0655.jpg'
+
+  Columns 82 through 85
+
+    'scene0677.jpg'    'scene0610.jpg'    'scene0614.jpg'    'blank.jpg'
+
+  Columns 86 through 93
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []    'blank.jpg'
+
+  Columns 94 through 98
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'scene0754.jpg'    'scene0699.jpg'
+
+  Columns 99 through 103
+
+    'scene0902.jpg'    'scene0786.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 104 through 111
+
+    'blank.jpg'    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 112 through 115
+
+    'blank.jpg'    'scene0899.jpg'    'scene0613.jpg'    'scene0638.jpg'
+
+  Columns 116 through 120
+
+    'scene0669.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 121 through 128
+
+    []    []    []    []    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 129 through 132
+
+    'scene0824.jpg'    'scene0894.jpg'    'scene0721.jpg'    'scene0773.jpg'
+
+  Columns 133 through 140
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []
+
+  Columns 141 through 145
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'scene0890.jpg'
+
+  Columns 146 through 149
+
+    'scene0607.jpg'    'scene0658.jpg'    'scene0776.jpg'    'blank.jpg'
+
+  Columns 150 through 157
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    []    []    []    []    'blank.jpg'
+
+  Column 158
+
+    'blank.jpg'
+
+imgs = cell(size(condOrder));
+imgs(condOrder==0) = 'blank.jpg';
+{Conversion to cell from char is not possible.
+} 
+imgs(condOrder==1) = allScenes(1:sum(condOrder==1));
+imgs(condOrder==2) = allFaces(1:sum(condOrder==2));
+imgs(condOrder==3) = allObjects(1:sum(condOrder==3)); 
+imgs
+
+imgs = 
+
+  Columns 1 through 5
+
+    'scene0709.jpg'    'scene0883.jpg'    'scene0632.jpg'    'scene0833.jpg'    []
+
+  Columns 6 through 11
+
+    []    []    []    'face0154.jpg'    'face0054.jpg'    'face0103.jpg'
+
+  Columns 12 through 18
+
+    'face0155.jpg'    []    []    []    []    'scene0720.jpg'    'scene0678.jpg'
+
+  Columns 19 through 25
+
+    'scene0829.jpg'    'scene0908.jpg'    []    []    []    []    'object0081.jpg'
+
+  Columns 26 through 32
+
+    'object0014.jpg'    'object0088.jpg'    'object0155.jpg'    []    []    []    []
+
+  Columns 33 through 37
+
+    'scene0602.jpg'    'scene0921.jpg'    'scene0623.jpg'    'scene0756.jpg'    []
+
+  Columns 38 through 43
+
+    []    []    []    'face0092.jpg'    'face0057.jpg'    'face0138.jpg'
+
+  Columns 44 through 50
+
+    'face0131.jpg'    []    []    []    []    'scene0772.jpg'    'scene0851.jpg'
+
+  Columns 51 through 57
+
+    'scene0918.jpg'    'scene0859.jpg'    []    []    []    []    'object0071.jpg'
+
+  Columns 58 through 64
+
+    'object0067.jpg'    'object0057.jpg'    'object0026.jpg'    []    []    []    []
+
+  Columns 65 through 69
+
+    'scene0820.jpg'    'scene0608.jpg'    'scene0804.jpg'    'scene0876.jpg'    []
+
+  Columns 70 through 75
+
+    []    []    []    'face0109.jpg'    'face0062.jpg'    'face0111.jpg'
+
+  Columns 76 through 82
+
+    'face0034.jpg'    []    []    []    []    'scene0655.jpg'    'scene0677.jpg'
+
+  Columns 83 through 89
+
+    'scene0610.jpg'    'scene0614.jpg'    []    []    []    []    'object0150.jpg'
+
+  Columns 90 through 96
+
+    'object0047.jpg'    'object0061.jpg'    'object0143.jpg'    []    []    []    []
+
+  Columns 97 through 101
+
+    'scene0754.jpg'    'scene0699.jpg'    'scene0902.jpg'    'scene0786.jpg'    []
+
+  Columns 102 through 107
+
+    []    []    []    'face0039.jpg'    'face0015.jpg'    'face0182.jpg'
+
+  Columns 108 through 114
+
+    'face0081.jpg'    []    []    []    []    'scene0899.jpg'    'scene0613.jpg'
+
+  Columns 115 through 121
+
+    'scene0638.jpg'    'scene0669.jpg'    []    []    []    []    'object0124.jpg'
+
+  Columns 122 through 128
+
+    'object0089.jpg'    'object0141.jpg'    'object0016.jpg'    []    []    []    []
+
+  Columns 129 through 133
+
+    'scene0824.jpg'    'scene0894.jpg'    'scene0721.jpg'    'scene0773.jpg'    []
+
+  Columns 134 through 139
+
+    []    []    []    'face0125.jpg'    'face0134.jpg'    'face0074.jpg'
+
+  Columns 140 through 146
+
+    'face0142.jpg'    []    []    []    []    'scene0890.jpg'    'scene0607.jpg'
+
+  Columns 147 through 153
+
+    'scene0658.jpg'    'scene0776.jpg'    []    []    []    []    'object0078.jpg'
+
+  Columns 154 through 158
+
+    'object0009.jpg'    'object0136.jpg'    'object0111.jpg'    []    []
+
+LocListMaker
+{Conversion to cell from char is not possible.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 30)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,0)">line 30</a>)
+imgs(condOrder==0) = 'blank.jpg';
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,1)">30  </a>imgs(condOrder==0) = 'blank.jpg';
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',35,1)">35  </a>imgs;
+imgs'
+
+ans = 
+
+    'scene0779.jpg'
+    'scene0706.jpg'
+    'scene0795.jpg'
+    'scene0792.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0020.jpg'
+    'face0185.jpg'
+    'face0094.jpg'
+    'face0105.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0714.jpg'
+    'scene0725.jpg'
+    'scene0611.jpg'
+    'scene0629.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0064.jpg'
+    'object0050.jpg'
+    'object0075.jpg'
+    'object0112.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0808.jpg'
+    'scene0766.jpg'
+    'scene0897.jpg'
+    'scene0899.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0003.jpg'
+    'face0001.jpg'
+    'face0041.jpg'
+    'face0187.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0630.jpg'
+    'scene0743.jpg'
+    'scene0759.jpg'
+    'scene0713.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0162.jpg'
+    'object0034.jpg'
+    'object0001.jpg'
+    'object0061.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0618.jpg'
+    'scene0679.jpg'
+    'scene0685.jpg'
+    'scene0730.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0171.jpg'
+    'face0010.jpg'
+    'face0015.jpg'
+    'face0099.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0815.jpg'
+    'scene0700.jpg'
+    'scene0712.jpg'
+    'scene0805.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0109.jpg'
+    'object0015.jpg'
+    'object0101.jpg'
+    'object0006.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0790.jpg'
+    'scene0627.jpg'
+    'scene0676.jpg'
+    'scene0745.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0055.jpg'
+    'face0146.jpg'
+    'face0111.jpg'
+    'face0012.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0697.jpg'
+    'scene0742.jpg'
+    'scene0807.jpg'
+    'scene0820.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0004.jpg'
+    'object0040.jpg'
+    'object0076.jpg'
+    'object0024.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0837.jpg'
+    'scene0657.jpg'
+    'scene0889.jpg'
+    'scene0800.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0158.jpg'
+    'face0005.jpg'
+    '..'
+    'face0139.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0703.jpg'
+    'scene0908.jpg'
+    'scene0852.jpg'
+    'scene0903.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0123.jpg'
+    'object0155.jpg'
+    'object0106.jpg'
+    'object0138.jpg'
+    'blank.jpg'
+    'blank.jpg'
+
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',35,1)">35  </a>imgs;
+imgs
+
+imgs = 
+
+  Columns 1 through 4
+
+    'scene0810.jpg'    'scene0789.jpg'    'scene0786.jpg'    'scene0866.jpg'
+
+  Columns 5 through 9
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0071.jpg'
+
+  Columns 10 through 14
+
+    'face0161.jpg'    'face0117.jpg'    'face0055.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 15 through 18
+
+    'blank.jpg'    'blank.jpg'    'scene0754.jpg'    'scene0767.jpg'
+
+  Columns 19 through 23
+
+    'scene0665.jpg'    'scene0744.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 24 through 27
+
+    'blank.jpg'    'object0032.jpg'    'object0025.jpg'    'object0106.jpg'
+
+  Columns 28 through 32
+
+    'object0062.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 33 through 36
+
+    'scene0707.jpg'    'scene0808.jpg'    'scene0720.jpg'    'scene0832.jpg'
+
+  Columns 37 through 41
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0153.jpg'
+
+  Columns 42 through 46
+
+    'face0170.jpg'    'face0082.jpg'    'face0111.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 47 through 50
+
+    'blank.jpg'    'blank.jpg'    'scene0725.jpg'    'scene0728.jpg'
+
+  Columns 51 through 55
+
+    'scene0771.jpg'    'scene0885.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 56 through 59
+
+    'blank.jpg'    'object0099.jpg'    'object0050.jpg'    'object0030.jpg'
+
+  Columns 60 through 64
+
+    'object0029.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 65 through 68
+
+    'scene0717.jpg'    'scene0837.jpg'    'scene0861.jpg'    'scene0632.jpg'
+
+  Columns 69 through 73
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0146.jpg'
+
+  Columns 74 through 78
+
+    'face0150.jpg'    'face0184.jpg'    'face0079.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 79 through 82
+
+    'blank.jpg'    'blank.jpg'    'scene0919.jpg'    'scene0792.jpg'
+
+  Columns 83 through 87
+
+    'scene0660.jpg'    'scene0868.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 88 through 91
+
+    'blank.jpg'    'object0100.jpg'    'object0018.jpg'    'object0023.jpg'
+
+  Columns 92 through 96
+
+    'object0121.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 97 through 100
+
+    'scene0858.jpg'    'scene0904.jpg'    'scene0801.jpg'    'scene0833.jpg'
+
+  Columns 101 through 105
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0051.jpg'
+
+  Columns 106 through 110
+
+    'face0083.jpg'    'face0147.jpg'    'face0057.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 111 through 114
+
+    'blank.jpg'    'blank.jpg'    'scene0658.jpg'    'scene0877.jpg'
+
+  Columns 115 through 119
+
+    'scene0631.jpg'    'scene0923.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 120 through 123
+
+    'blank.jpg'    'object0044.jpg'    'object0066.jpg'    'object0012.jpg'
+
+  Columns 124 through 128
+
+    'object0086.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 129 through 132
+
+    'scene0907.jpg'    'scene0834.jpg'    'scene0910.jpg'    'scene0776.jpg'
+
+  Columns 133 through 137
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0177.jpg'
+
+  Columns 138 through 142
+
+    'face0138.jpg'    'face0086.jpg'    'face0029.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 143 through 146
+
+    'blank.jpg'    'blank.jpg'    'scene0623.jpg'    'scene0698.jpg'
+
+  Columns 147 through 151
+
+    'scene0888.jpg'    'scene0865.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 152 through 155
+
+    'blank.jpg'    'object0091.jpg'    'object0007.jpg'    'object0076.jpg'
+
+  Columns 156 through 158
+
+    'object0101.jpg'    'blank.jpg'    'blank.jpg'
+
+imgs'
+
+ans = 
+
+    'scene0810.jpg'
+    'scene0789.jpg'
+    'scene0786.jpg'
+    'scene0866.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0071.jpg'
+    'face0161.jpg'
+    'face0117.jpg'
+    'face0055.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0754.jpg'
+    'scene0767.jpg'
+    'scene0665.jpg'
+    'scene0744.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0032.jpg'
+    'object0025.jpg'
+    'object0106.jpg'
+    'object0062.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0707.jpg'
+    'scene0808.jpg'
+    'scene0720.jpg'
+    'scene0832.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0153.jpg'
+    'face0170.jpg'
+    'face0082.jpg'
+    'face0111.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0725.jpg'
+    'scene0728.jpg'
+    'scene0771.jpg'
+    'scene0885.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0099.jpg'
+    'object0050.jpg'
+    'object0030.jpg'
+    'object0029.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0717.jpg'
+    'scene0837.jpg'
+    'scene0861.jpg'
+    'scene0632.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0146.jpg'
+    'face0150.jpg'
+    'face0184.jpg'
+    'face0079.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0919.jpg'
+    'scene0792.jpg'
+    'scene0660.jpg'
+    'scene0868.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0100.jpg'
+    'object0018.jpg'
+    'object0023.jpg'
+    'object0121.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0858.jpg'
+    'scene0904.jpg'
+    'scene0801.jpg'
+    'scene0833.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0051.jpg'
+    'face0083.jpg'
+    'face0147.jpg'
+    'face0057.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0658.jpg'
+    'scene0877.jpg'
+    'scene0631.jpg'
+    'scene0923.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0044.jpg'
+    'object0066.jpg'
+    'object0012.jpg'
+    'object0086.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0907.jpg'
+    'scene0834.jpg'
+    'scene0910.jpg'
+    'scene0776.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'face0177.jpg'
+    'face0138.jpg'
+    'face0086.jpg'
+    'face0029.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'scene0623.jpg'
+    'scene0698.jpg'
+    'scene0888.jpg'
+    'scene0865.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'blank.jpg'
+    'object0091.jpg'
+    'object0007.jpg'
+    'object0076.jpg'
+    'object0101.jpg'
+    'blank.jpg'
+    'blank.jpg'
+
+condOrder
+
+condOrder =
+
+  Columns 1 through 14
+
+     1     1     1     1     0     0     0     0     2     2     2     2     0     0
+
+  Columns 15 through 28
+
+     0     0     1     1     1     1     0     0     0     0     3     3     3     3
+
+  Columns 29 through 42
+
+     0     0     0     0     1     1     1     1     0     0     0     0     2     2
+
+  Columns 43 through 56
+
+     2     2     0     0     0     0     1     1     1     1     0     0     0     0
+
+  Columns 57 through 70
+
+     3     3     3     3     0     0     0     0     1     1     1     1     0     0
+
+  Columns 71 through 84
+
+     0     0     2     2     2     2     0     0     0     0     1     1     1     1
+
+  Columns 85 through 98
+
+     0     0     0     0     3     3     3     3     0     0     0     0     1     1
+
+  Columns 99 through 112
+
+     1     1     0     0     0     0     2     2     2     2     0     0     0     0
+
+  Columns 113 through 126
+
+     1     1     1     1     0     0     0     0     3     3     3     3     0     0
+
+  Columns 127 through 140
+
+     0     0     1     1     1     1     0     0     0     0     2     2     2     2
+
+  Columns 141 through 154
+
+     0     0     0     0     1     1     1     1     0     0     0     0     3     3
+
+  Columns 155 through 158
+
+     3     3     0     0
+
+cond
+{Error using <a href="matlab:helpUtils.errorDocCallback('cond', '/Applications/MATLAB_R2012b.app/toolbox/matlab/matfun/cond.m', 25)" style="font-weight:bold">cond</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2012b.app/toolbox/matlab/matfun/cond.m',25,0)">line 25</a>)
+Not enough input arguments.
+} 
+<a href="matlab: opentoline('/Applications/MATLAB_R2012b.app/toolbox/matlab/matfun/cond.m',25,1)">25  </a>if issparse(A)
+LocListMaker
+{Index of element to remove exceeds matrix dimensions.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 20)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',20,0)">line 20</a>)
+    condOrder(fixTrialsToRemove) = [];
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',20,1)">20  </a>    condOrder(fixTrialsToRemove) = [];
+i
+
+i =
+
+     1
+
+clear all
+LocListMaker
+{Undefined variable "thePath" or function "thePath.stim".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 22)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',22,0)">line 22</a>)
+    allScenes_h = dir(fullfile(thePath.stim, 'scenes_loc/*.jpg'));
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',22,1)">22  </a>    allScenes_h = dir(fullfile(thePath.stim, 'scenes_loc/*.jpg'));
+if system_dependent('IsDebugMode')==1, dbquit; end
+cd ../
+ONRM
+
+ans =
+
+/Users/waglab/Experiments/alan/ONCC_fMRI
+
+added start
+added script
+added stim
+added data
+added list
+LocListMaker
+{Undefined function or variable 'condOrder'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 30)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,0)">line 30</a>)
+    imgs = cell(size(condOrder));
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',30,1)">30  </a>    imgs = cell(size(condOrder));
+LocListMaker
+{Undefined function or variable 'condOrder'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 31)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',31,0)">line 31</a>)
+    imgs(condOrder==0) = {'blank.jpg'};
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',31,1)">31  </a>    imgs(condOrder==0) = {'blank.jpg'};
+LocListMaker
+{Undefined function or variable 'condOrder'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 32)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',32,0)">line 32</a>)
+    imgs(imgCond==1) = allScenes(1:sum(condOrder==1));
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',32,1)">32  </a>    imgs(imgCond==1) = allScenes(1:sum(condOrder==1));
+LocListMaker
+{Error using <a href="matlab:helpUtils.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+Dimensions of matrices being concatenated are not consistent.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 36)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',36,0)">line 36</a>)
+    locList = [imgs' imgCond'];
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',36,1)">36  </a>    locList = [imgs' imgCond'];
+imgs
+
+imgs = 
+
+  Columns 1 through 4
+
+    'scene0625.jpg'    'scene0914.jpg'    'scene0732.jpg'    'scene0878.jpg'
+
+  Columns 5 through 9
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0039.jpg'
+
+  Columns 10 through 14
+
+    'face0058.jpg'    'face0124.jpg'    'face0163.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 15 through 18
+
+    'blank.jpg'    'blank.jpg'    'scene0915.jpg'    'scene0748.jpg'
+
+  Columns 19 through 23
+
+    'scene0810.jpg'    'scene0754.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 24 through 27
+
+    'blank.jpg'    'object0098.jpg'    'object0016.jpg'    'object0080.jpg'
+
+  Columns 28 through 32
+
+    'object0129.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 33 through 36
+
+    'scene0656.jpg'    'scene0874.jpg'    'scene0872.jpg'    'scene0891.jpg'
+
+  Columns 37 through 41
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0087.jpg'
+
+  Columns 42 through 46
+
+    'face0179.jpg'    'face0167.jpg'    'face0021.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 47 through 50
+
+    'blank.jpg'    'blank.jpg'    'scene0791.jpg'    'scene0851.jpg'
+
+  Columns 51 through 55
+
+    'scene0917.jpg'    'scene0726.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 56 through 59
+
+    'blank.jpg'    'object0131.jpg'    'object0115.jpg'    'object0135.jpg'
+
+  Columns 60 through 64
+
+    'object0117.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 65 through 68
+
+    'scene0661.jpg'    'scene0887.jpg'    'scene0798.jpg'    'scene0888.jpg'
+
+  Columns 69 through 73
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0073.jpg'
+
+  Columns 74 through 78
+
+    'face0010.jpg'    'face0169.jpg'    'face0020.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 79 through 82
+
+    'blank.jpg'    'blank.jpg'    'scene0885.jpg'    'scene0664.jpg'
+
+  Columns 83 through 87
+
+    'scene0832.jpg'    'scene0711.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 88 through 91
+
+    'blank.jpg'    'object0079.jpg'    'object0010.jpg'    'object0140.jpg'
+
+  Columns 92 through 96
+
+    'object0119.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 97 through 100
+
+    'scene0730.jpg'    'scene0682.jpg'    'scene0659.jpg'    'scene0860.jpg'
+
+  Columns 101 through 105
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0032.jpg'
+
+  Columns 106 through 110
+
+    'face0033.jpg'    'face0164.jpg'    'face0035.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 111 through 114
+
+    'blank.jpg'    'blank.jpg'    'scene0870.jpg'    'scene0681.jpg'
+
+  Columns 115 through 119
+
+    'scene0775.jpg'    'scene0779.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 120 through 123
+
+    'blank.jpg'    'object0063.jpg'    'object0093.jpg'    'object0012.jpg'
+
+  Columns 124 through 128
+
+    'object0042.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 129 through 132
+
+    'scene0760.jpg'    'scene0805.jpg'    'scene0673.jpg'    'scene0853.jpg'
+
+  Columns 133 through 137
+
+    'blank.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'    'face0110.jpg'
+
+  Columns 138 through 142
+
+    'face0181.jpg'    'face0129.jpg'    'face0063.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 143 through 146
+
+    'blank.jpg'    'blank.jpg'    'scene0608.jpg'    'scene0739.jpg'
+
+  Columns 147 through 151
+
+    'scene0781.jpg'    'scene0628.jpg'    'blank.jpg'    'blank.jpg'    'blank.jpg'
+
+  Columns 152 through 155
+
+    'blank.jpg'    'object0072.jpg'    'object0126.jpg'    'object0120.jpg'
+
+  Columns 156 through 158
+
+    'object0157.jpg'    'blank.jpg'    'blank.jpg'
+
+imgCond
+
+imgCond =
+
+  Columns 1 through 14
+
+     1     1     1     1     0     0     0     0     2     2     2     2     0     0
+
+  Columns 15 through 28
+
+     0     0     1     1     1     1     0     0     0     0     3     3     3     3
+
+  Columns 29 through 42
+
+     0     0     0     0     1     1     1     1     0     0     0     0     2     2
+
+  Columns 43 through 56
+
+     2     2     0     0     0     0     1     1     1     1     0     0     0     0
+
+  Columns 57 through 70
+
+     3     3     3     3     0     0     0     0     1     1     1     1     0     0
+
+  Columns 71 through 84
+
+     0     0     2     2     2     2     0     0     0     0     1     1     1     1
+
+  Columns 85 through 98
+
+     0     0     0     0     3     3     3     3     0     0     0     0     1     1
+
+  Columns 99 through 112
+
+     1     1     0     0     0     0     2     2     2     2     0     0     0     0
+
+  Columns 113 through 126
+
+     1     1     1     1     0     0     0     0     3     3     3     3     0     0
+
+  Columns 127 through 140
+
+     0     0     1     1     1     1     0     0     0     0     2     2     2     2
+
+  Columns 141 through 154
+
+     0     0     0     0     1     1     1     1     0     0     0     0     3     3
+
+  Columns 155 through 158
+
+     3     3     0     0
+
+LocListMaker
+{Matrix index is out of range for deletion.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 20)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',20,0)">line 20</a>)
+    imgCond(fixTrialsToRemove) = [];
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',20,1)">20  </a>    imgCond(fixTrialsToRemove) = [];
+cd ../
+cd alan
+ls -ltr
+total 192
+-rw-r--r--  1 waglab  staff   283 Jun 21  2013 train_rsa.m
+-rw-r--r--  1 waglab  staff  3971 Jun 21  2013 train_libsvm.m
+-rw-r--r--  1 waglab  staff  6026 Jun 21  2013 train_liblinear.m
+-rw-r--r--  1 waglab  staff   759 Jun 21  2013 train_elasticNet.m
+-rw-r--r--  1 waglab  staff  2885 Jun 21  2013 test_libsvm.m
+-rw-r--r--  1 waglab  staff  2701 Jun 21  2013 test_liblinear.m
+-rw-r--r--  1 waglab  staff   146 Jun 21  2013 sliding_window.m
+-rw-r--r--  1 waglab  staff  1731 Jun 21  2013 nanzscore.m
+-rw-------  1 waglab  staff   109 Jun 21  2013 logit.m
+-rw-r--r--  1 waglab  staff   205 Jun 21  2013 dirNoLeadingPeriods.m
+-rw-r--r--  1 waglab  staff   202 Jun 21  2013 dPrime.m
+-rw-r--r--  1 waglab  staff  3264 Jun 21  2013 train_pLL_AGedits.m
+-rw-r--r--  1 waglab  staff   447 Jun 21  2013 train_meanRSA.m
+-rw-r--r--  1 waglab  staff  1323 Jun 21  2013 test_rsa.m
+-rw-r--r--  1 waglab  staff   271 Jun 21  2013 test_meanRSA.m
+-rw-r--r--  1 waglab  staff   122 Jun 21  2013 steRMANOVA.m
+-rw-r--r--  1 waglab  staff    84 Jun 21  2013 ste.m
+-rw-r--r--  1 waglab  staff   884 Jun 21  2013 prepend.m
+-rw-r--r--  1 waglab  staff   248 Jun 21  2013 makeQuantileLabels.m
+-rw-------  1 waglab  staff  1502 Jun 21  2013 cell2csv.m
+-rw-r--r--  1 waglab  staff    63 Jun 21  2013 binomialSTE.m
+-rw-r--r--  1 waglab  staff   290 Jun 21  2013 asRow.m
+-rw-r--r--  1 waglab  staff   291 Jun 21  2013 asColumn.m
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+mat2cellByElem(1:10)
+
+ans = 
+
+    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]
+
+LocListMaker
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',37,1)">37  </a>    save (sprintf('LocList_%g', i), 'locList');
+locList
+
+locList = 
+
+    'scene0793.jpg'     [1]
+    'scene0702.jpg'     [1]
+    'scene0787.jpg'     [1]
+    'scene0878.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0165.jpg'      [2]
+    'face0076.jpg'      [2]
+    'face0011.jpg'      [2]
+    'face0081.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0918.jpg'     [1]
+    'scene0803.jpg'     [1]
+    'scene0611.jpg'     [1]
+    'scene0722.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0062.jpg'    [3]
+    'object0110.jpg'    [3]
+    'object0064.jpg'    [3]
+    'object0097.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0709.jpg'     [1]
+    'scene0850.jpg'     [1]
+    'scene0866.jpg'     [1]
+    'scene0707.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0093.jpg'      [2]
+    'face0182.jpg'      [2]
+    'face0049.jpg'      [2]
+    'face0024.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0676.jpg'     [1]
+    'scene0774.jpg'     [1]
+    'scene0827.jpg'     [1]
+    'scene0675.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0107.jpg'    [3]
+    'object0157.jpg'    [3]
+    'object0075.jpg'    [3]
+    'object0149.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0720.jpg'     [1]
+    'scene0741.jpg'     [1]
+    'scene0802.jpg'     [1]
+    'scene0837.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0099.jpg'      [2]
+    'face0066.jpg'      [2]
+    'face0104.jpg'      [2]
+    'face0156.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0858.jpg'     [1]
+    'scene0888.jpg'     [1]
+    'scene0916.jpg'     [1]
+    'scene0758.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0047.jpg'    [3]
+    'object0048.jpg'    [3]
+    'object0001.jpg'    [3]
+    'object0141.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0877.jpg'     [1]
+    'scene0839.jpg'     [1]
+    'scene0630.jpg'     [1]
+    'scene0893.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0118.jpg'      [2]
+    'face0115.jpg'      [2]
+    'face0124.jpg'      [2]
+    'face0108.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0610.jpg'     [1]
+    'scene0645.jpg'     [1]
+    'scene0912.jpg'     [1]
+    'scene0755.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0037.jpg'    [3]
+    'object0128.jpg'    [3]
+    'object0093.jpg'    [3]
+    'object0057.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0798.jpg'     [1]
+    'scene0880.jpg'     [1]
+    'scene0653.jpg'     [1]
+    'scene0734.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0145.jpg'      [2]
+    'face0168.jpg'      [2]
+    'face0021.jpg'      [2]
+    'face0111.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0750.jpg'     [1]
+    'scene0680.jpg'     [1]
+    'scene0754.jpg'     [1]
+    'scene0842.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0137.jpg'    [3]
+    'object0131.jpg'    [3]
+    'object0126.jpg'    [3]
+    'object0058.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+
+LocListMaker
+{Index exceeds matrix dimensions.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('LocListMaker', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m', 11)" style="font-weight:bold">LocListMaker</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',11,0)">line 11</a>)
+    thisList = ListTypes{i};
+} 
+<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/LocListMaker.m',11,1)">11  </a>    thisList = ListTypes{i};
+LocListMaker
+LocListMaker
+y = load('LocList_1.mat')
+
+y = 
+
+    locList: {158x2 cell}
+
+y.LocList
+{Reference to non-existent field 'LocList'.
+} 
+y.locList
+
+ans = 
+
+    'scene0888.jpg'     [1]
+    'scene0918.jpg'     [1]
+    'scene0646.jpg'     [1]
+    'scene0623.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0072.jpg'      [2]
+    'face0077.jpg'      [2]
+    'face0036.jpg'      [2]
+    'face0073.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0813.jpg'     [1]
+    'scene0618.jpg'     [1]
+    'scene0815.jpg'     [1]
+    'scene0806.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0018.jpg'    [3]
+    'object0131.jpg'    [3]
+    'object0145.jpg'    [3]
+    'object0017.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0747.jpg'     [1]
+    'scene0770.jpg'     [1]
+    'scene0753.jpg'     [1]
+    'scene0801.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0016.jpg'      [2]
+    'face0103.jpg'      [2]
+    'face0176.jpg'      [2]
+    'face0124.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0915.jpg'     [1]
+    'scene0906.jpg'     [1]
+    'scene0863.jpg'     [1]
+    'scene0702.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0014.jpg'    [3]
+    'object0013.jpg'    [3]
+    'object0109.jpg'    [3]
+    'object0082.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0893.jpg'     [1]
+    'scene0663.jpg'     [1]
+    'scene0681.jpg'     [1]
+    'scene0615.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0153.jpg'      [2]
+    'face0161.jpg'      [2]
+    'face0181.jpg'      [2]
+    'face0080.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0920.jpg'     [1]
+    'scene0881.jpg'     [1]
+    'scene0675.jpg'     [1]
+    'scene0732.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0087.jpg'    [3]
+    'object0052.jpg'    [3]
+    'object0101.jpg'    [3]
+    'object0104.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0913.jpg'     [1]
+    'scene0611.jpg'     [1]
+    'scene0734.jpg'     [1]
+    'scene0634.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0198.jpg'      [2]
+    'face0025.jpg'      [2]
+    'face0089.jpg'      [2]
+    'face0013.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0765.jpg'     [1]
+    'scene0837.jpg'     [1]
+    'scene0817.jpg'     [1]
+    'scene0606.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0092.jpg'    [3]
+    'object0162.jpg'    [3]
+    'object0073.jpg'    [3]
+    'object0057.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0870.jpg'     [1]
+    'scene0849.jpg'     [1]
+    'scene0748.jpg'     [1]
+    'scene0757.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'face0041.jpg'      [2]
+    'face0167.jpg'      [2]
+    'face0157.jpg'      [2]
+    'face0065.jpg'      [2]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'scene0896.jpg'     [1]
+    'scene0718.jpg'     [1]
+    'scene0890.jpg'     [1]
+    'scene0711.jpg'     [1]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+    'object0115.jpg'    [3]
+    'object0068.jpg'    [3]
+    'object0065.jpg'    [3]
+    'object0121.jpg'    [3]
+    'blank.jpg'         [0]
+    'blank.jpg'         [0]
+
+cd ../stim/
+edit ON_picStudy.m
+ONRMrun(thePath)
+Enter date (e.g. '13Feb09') 66Feb66
+Enter subject number: 1
+Which task?  ON_S[1] ON_T[2] ON_P1[3] ON_P1[4]? 1
+In scanner [1] behavioral [2] or mock scanner [3]? 2
+At which block would you like to start?  1
+
+
+PTB-INFO: This is Psychtoolbox-3 for Apple OS X, under Matlab 64-Bit (Version 3.0.10 - Build date: Apr 11 2013).
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Deficient Apple OS/X 10.7 or later detected: Would use more fragile CoreVideo timestamping instead of precise vbl-irq timestamping
+PTB-INFO: as fallback. Installation of the PsychtoolboxKernelDriver is strongly recommended if you care about precise visual onset timestamping
+PTB-INFO: or timing. See 'help PsychtoolboxKernelDriver' for instructions.
+
+PTB-WARNING: Querying rasterbeam-position doesn't work on your setup! (Returns a constant value 900)
+PTB-WARNING: This can happen if Psychtoolbox gets the mapping of connected displays to graphics card
+PTB-WARNING: outputs wrong. See 'help DisplayOutputMappings' for tips on how to resolve this problem.
+
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: NVIDIA GeForce GT 650M OpenGL Engine :: 2.1 NVIDIA-8.12.47 310.40.00.05f01
+PTB-INFO: Renderer has 512 MB of VRAM and a maximum 497 MB of texture memory.
+PTB-INFO: VBL startline = 900 , VBL Endline = -1
+PTB-INFO: Beamposition queries unsupported on this system. Will try to use kernel-level vbl interrupts as fallback.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.736649 ms [59.749118 Hz]. (50 valid samples taken, stddev=0.052550 ms.)
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+
+
+----- ! PTB - WARNING: SYNCHRONIZATION TROUBLE ! ----
+
+One or more internal checks (see Warnings above) indicate that
+queries of rasterbeam position are not properly working for your setup.
+
+Psychtoolbox will work around this by using a different timing algorithm, 
+but it will cause Screen('Flip') to report less accurate/robust timestamps
+for stimulus timing.
+Read 'help BeampositionQueries' for more info and troubleshooting tips.
+
+
+PTB-INFO: Support for fast OffscreenWindows enabled.
+
+
+PTB-ERROR: Screen('Flip'); kernel-level timestamping computed bogus values!!!
+PTB-ERROR: vbltimestampquery_retrycount = 8, preflip_vbltimestamp=postflip= 9368.202440, time_at_swaprequest= 9368.207512
+PTB-ERROR: This error can be due to either of the following causes (No simple way to discriminate):
+PTB-ERROR: Either something is broken in your systems VBL-IRQ timestamping. I've disabled high precision
+PTB-ERROR: timestamping for now. Returned timestamps will be less robust and accurate, but at least ok, if that was the culprit.
+
+PTB-ERROR: An equally likely cause would be that Synchronization of stimulus onset (buffer swap) to the
+PTB-ERROR: vertical blank interval VBL is not working properly.
+PTB-ERROR: Please run the script PerceptualVBLSyncTest to check this. With non-working sync to VBL, all stimulus timing
+PTB-ERROR: becomes quite futile. Also read 'help SyncTrouble' !
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('KbCheck', '/Applications/Psychtoolbox/PsychBasic/KbCheck.m', 207)" style="font-weight:bold">KbCheck</a> (<a href="matlab: opentoline('/Applications/Psychtoolbox/PsychBasic/KbCheck.m',207,0)">line 207</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('AG3recordKeys', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/AG3recordKeys.m', 86)" style="font-weight:bold">AG3recordKeys</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/AG3recordKeys.m',86,0)">line 86</a>)
+            while KbCheck(deviceNumber)
+
+In <a href="matlab:helpUtils.errorDocCallback('SFO_Localizer', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/SFO_Localizer.m', 163)" style="font-weight:bold">SFO_Localizer</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/SFO_Localizer.m',163,0)">line 163</a>)
+       AG3recordKeys(ons_start,goTime,S.boxNum);
+
+In <a href="matlab:helpUtils.errorDocCallback('ONRMrun', '/Users/waglab/Experiments/alan/ONCC_fMRI/script/ONRMrun.m', 108)" style="font-weight:bold">ONRMrun</a> (<a href="matlab: opentoline('/Users/waglab/Experiments/alan/ONCC_fMRI/script/ONRMrun.m',108,0)">line 108</a>)
+    LocDat(1) = SFO_Localizer(thePath,listName,sName,sNum,S,1, 1);
+} 
+<a href="matlab: opentoline('/Applications/Psychtoolbox/PsychBasic/KbCheck.m',207,1)">207 </a>                [DeviceKeyIsDown, secs, DeviceKeyCode]= PsychHID('KbCheck', i, ptb_kbcheck_enabledKeys);
+gg
+{Undefined function or variable 'gg'.
+} 
+
+sca
+
+
+PTB-INFO: There are still 159 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
+PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
+PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
+PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
+PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
+PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
+PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
+
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 3 times out of a total of 205 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+sca
+if system_dependent('IsDebugMode')==1, dbquit; end
+16*5*4*2
+
+ans =
+
+   640
+
+(16*5*4*2)/60
+
+ans =
+
+   10.6667
+
+(16*5*4*2)
+
+ans =
+
+   640
+
+(16*5*4*2)/2
+
+ans =
+
+   320
+
+10*06
+
+ans =
+
+    60
+
+10*06
+
+ans =
+
+    60
+
+10*60
+
+ans =
+
+   600
+
+10*60 + 12
+
+ans =
+
+   612
+
+(10*60 + 12)/2
+
+ans =
+
+   306
+
+(20*60 + 12)/2
+
+ans =
+
+   606
+
+(20*60 + 12)/2.5
+
+ans =
+
+  484.8000
+
