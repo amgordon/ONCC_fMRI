@@ -101,7 +101,7 @@ suffix = 1;
 
 while checkEmpty ~=1
     suffix = suffix+1;
-    matName = ['Loc_sub' num2str(sNum), '_date_' sName 'out_' num2str(suffix)  '.mat'];
+    matName = ['Loc_sub' num2str(sNum), '_date_' sName 'out' num2str(suffix)  '.mat'];
     checkEmpty = isempty(dir (matName));
 end
 

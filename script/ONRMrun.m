@@ -109,7 +109,7 @@ if testType == 1
     
     while checkEmpty ~=1
         suffix = suffix+1;
-        saveName = ['ON_rest' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        saveName = ['ONRest' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
         checkEmpty = isempty(dir (saveName));
     end
     
@@ -125,7 +125,7 @@ elseif testType == 2
     suffix = 1;
     while checkEmpty ~=1
         suffix = suffix+1;
-        saveName = ['ONRMStudy_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        saveName = ['ONLoc_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
         checkEmpty = isempty(dir (saveName));
     end
     
@@ -141,7 +141,7 @@ elseif testType == 3
     suffix = 1;    
     while checkEmpty ~=1
         suffix = suffix+1;
-        saveName = ['ONRMStudy_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        saveName = ['ONStudy_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
         checkEmpty = isempty(dir (saveName));
     end
 
@@ -158,7 +158,7 @@ elseif testType == 4
 
     while checkEmpty ~=1
         suffix = suffix+1;
-        saveName = ['AG3_ONTest_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        saveName = ['ONTest_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
         checkEmpty = isempty(dir (saveName));
     end
 
