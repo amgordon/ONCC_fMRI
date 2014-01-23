@@ -76,7 +76,7 @@ end
 % for the first block, display instructions
 if EncBlock == 1
 
-    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Please pay attention to each picture, as you will be asked about them in a later phase of the study.');
+    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Please pay attention to each picture, as you will be asked about these pictures in a later phase of the study.');
 
     DrawFormattedText(S.Window, ins_txt{1},'center','center',S.textColor, 75);
     Screen('Flip',S.Window);

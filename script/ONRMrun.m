@@ -167,7 +167,7 @@ end
 
 message = 'End of script. Press any key to exit.';
 [hPos, vPos] = AG3centerText(S.Window,S.screenNumber,message);
-Screen(S.Window,'DrawText',message, hPos, vPos, 255);
+Screen(S.Window,'DrawText',message, hPos, vPos, S.textColor);
 Screen(S.Window,'Flip');
 pause;
 Screen('CloseAll');
