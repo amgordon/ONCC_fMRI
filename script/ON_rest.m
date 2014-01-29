@@ -44,8 +44,20 @@ AG3recordKeys(startTime,goTime,S.kbNum);  % not collecting keys, just a delay
 
 theData.totalTime = GetSecs-startTime;
 
+
 cd(S.subData);
-matName = ['Rest_' num2str(S.sNum), '_' S.sName 'out(1).mat'];
+
+matName = fullfile(S.subData, ['rest_' num2str(sNum), '_date_' sName 'out.mat']);
+
+checkEmpty = isempty(dir (matName));
+suffix = 1;
+
+while checkEmpty ~=1
+    suffix = suffix+1;
+    matName = fullfile(S.subData, ['rest_' num2str(sNum), '_' sName 'out(' num2str(suffix) ').mat']);
+    checkEmpty = isempty(dir (matName));
+end
+
 cmd = ['save ' matName];
 eval(cmd);
 

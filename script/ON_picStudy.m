@@ -101,11 +101,11 @@ suffix = 1;
 
 while checkEmpty ~=1
     suffix = suffix+1;
-    matName = ['Acc1_encode_' num2str(sNum), '_' sName 'out(' num2str(suffix) ').mat'];
+    matName = fullfile(S.subData, ['Acc1_encode_' num2str(sNum), '_' sName 'out(' num2str(suffix) ').mat']);
     checkEmpty = isempty(dir (matName));
 end
 
-matName = fullfile(S.subData, matName);
+
 
 % Present test trials
 goTime = 0;
