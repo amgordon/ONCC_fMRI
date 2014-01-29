@@ -43,12 +43,8 @@ trialcount = 0;
 for preall = startTrial:listLength
         theData.onset(preall) = 0;
         theData.dur(preall) =  0;
-        theData.judgeResp{preall} = 'noanswer';
-        theData.judgeRT{preall} = 0;
         theData.stimResp{preall} = 'noanswer';
         theData.stimRT{preall} = 0;
-        theData.presentedTask{preall} = 'noanswer';
-        theData.confActual{preall} = 'noanswer';
 end
 
 hands = {'Left','Right'};
@@ -76,7 +72,7 @@ end
 % for the first block, display instructions
 if EncBlock == 1
 
-    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Between each set of pictures, you will see a blank screen with a fixation cross. Please pay attention to each picture.  When the screen is blank, please look at the fixation cross.');
+    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Between each set of pictures, you will see a blank screen with a fixation cross. Please pay attention to each picture.  After each picture appears, please press the button with your right pointer finger to indicate that you have seen it.  When the screen is blank, please look at the fixation cross.');
 
     DrawFormattedText(S.Window, ins_txt{1},'center','center',S.textColor, 75);
     Screen('Flip',S.Window);
@@ -160,7 +156,7 @@ for Trial = 1:listLength
     if theData.cond{Trial}~=0
         Screen('DrawTexture', S.Window, picPtrs(Trial));
         Screen(S.Window,'Flip');
-        AG3recordKeys(ons_start,goTime,S.boxNum);
+        [keys, RT] = AG3recordKeys(ons_start,goTime,S.boxNum);
         
         % Desired Time
         desiredTime = (Trial)*(stimTime + blankTime);
@@ -183,7 +179,9 @@ for Trial = 1:listLength
     end
     
     
-        
+    theData.stimResp{Trial} = keys;
+    theData.stimRT{Trial} = RT;
+    
     cmd = ['save ' matName];
     eval(cmd);
     fprintf('%d\n',Trial);
