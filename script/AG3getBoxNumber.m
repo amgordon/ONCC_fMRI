@@ -10,7 +10,7 @@ deviceNumber = 0;
 d = PsychHID('Devices');
 deviceNumber = [];
 for n = 1:length(d)
-    if (strcmp (d(n).usageName, 'Keyboard') &&(d(n).productID ~=560))
+    if (strcmp (d(n).usageName, 'Keyboard') &&(~strcmp(d(n).manufacturer, 'Apple Inc.')))
     deviceNumber = [deviceNumber n];
     %if (d(n).productID == 8) && (strcmp(d(n).usageName,'Keyboard')) %CNI, 10-button button boxes
     %if (d(n).productID == 612) && (strcmp(d(n).usageName,'Keyboard')) %CNI, hand-shaped button boxes
