@@ -72,7 +72,7 @@ end
 % for the first block, display instructions
 if EncBlock == 1
 
-    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Between each set of pictures, you will see a blank screen with a fixation cross. Please pay attention to each picture.  After each picture appears, please press the button with your right pointer finger to indicate that you have seen it.  When the screen is blank, please look at the fixation cross.');
+    ins_txt{1} =  sprintf('In this phase, you will see a series of pictures presented on the screen.  Between each set of pictures, you will see a blank screen with a fixation cross. \n \n Please pay attention to each picture.  When the screen is blank, please look at the fixation cross.');
 
     DrawFormattedText(S.Window, ins_txt{1},'center','center',S.textColor, 75);
     Screen('Flip',S.Window);
