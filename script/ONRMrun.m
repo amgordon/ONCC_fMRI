@@ -14,8 +14,8 @@ end
 
 if nargin<4
     testType = 0;
-    while ~ismember(testType,[1,2,3,4])
-        testType = input('Which task?  Rest[1] Loc[2] ON_S[3] ON_T[4]? ');
+    while ~ismember(testType,1:5)
+        testType = input('Which task?  Rest[1] SFOLoc[2] ON_S[3] ON_T[4] CPLoc[5] ? ');
     end
 end
 
@@ -74,7 +74,7 @@ S.blinkColor  = [0 0 0];
 Screen('TextSize', S.Window, 30);
 Screen('TextStyle', S.Window, 1);
 S.on = 1;  % Screen now on
-S.scrsz = get(0,'ScreenSize');
+S.scrsz = get(S.screenNumber,'ScreenSize');
 
 
 %% info for test script
@@ -94,6 +94,29 @@ S.respTextInsRight = [S.scrsz(3)/2 + 215, S.scrsz(4)/2+320];
 S.respTextLeft = [S.scrsz(3)/2 - 280, S.scrsz(4)/2+120];
 S.respTextRight = [S.scrsz(3)/2 + 215, S.scrsz(4)/2+120];
 S.respStimY = S.scrsz(4)/2+150;
+
+%% hexagons for center/periphery localizer
+S.picRad1 = 200;
+S.picRad2 = 250;
+radDiff = S.picRad2 - S.picRad1;
+
+%mid right
+S.hex{1} = [S.scrsz(3)/2 + S.picRad2, S.scrsz(4)/2 - S.picRad1, S.scrsz(3)/2 + S.picRad2+2*S.picRad1,  S.scrsz(4)/2+S.picRad1];
+
+% mid left
+S.hex{2} = [S.scrsz(3)/2 - S.picRad2 - 2*S.picRad1, S.scrsz(4)/2 - S.picRad1, S.scrsz(3)/2 - S.picRad2,  S.scrsz(4)/2+S.picRad1];
+
+% bottom right
+S.hex{3} = [S.scrsz(3)/2 + radDiff, S.scrsz(4)/2 + S.picRad2, S.scrsz(3)/2 + 2*S.picRad1 + radDiff,  S.scrsz(4)/2 + S.picRad2 + 2*S.picRad1];
+
+% bottom left
+S.hex{4} = [S.scrsz(3)/2 - 2*S.picRad1 - radDiff, S.scrsz(4)/2 + S.picRad2, S.scrsz(3)/2 - radDiff,  S.scrsz(4)/ 2+ S.picRad2 + 2*S.picRad1];
+
+% top right
+S.hex{5} = [S.scrsz(3)/2 + radDiff, S.scrsz(4)/2 - S.picRad2 - 2*S.picRad1, S.scrsz(3)/2 + 2*S.picRad1+ radDiff,  S.scrsz(4)/2-S.picRad2];
+
+% top left
+S.hex{6} = [S.scrsz(3)/2 - 2*S.picRad1 - radDiff, S.scrsz(4)/2 - 2*S.picRad1 - S.picRad2, S.scrsz(3)/2 - radDiff,  S.scrsz(4)/2-S.picRad2];
 
 %%
 S.sNum = sNum;
@@ -118,14 +141,14 @@ if testType == 1
 elseif testType == 2
     saveName = ['ONRMLoc' sName '_' num2str(sNum) '.mat'];
     
-    listName = sprintf('LocList_%g.mat', 1+mod(sNum-1, 16));
-    LocDat(1) = SFO_Localizer(thePath,listName,sName,sNum,S,1, 1);
+    listName = sprintf('SFOLocList_%g.mat', 1+mod(sNum-1, 16));
+    SFOLocDat(1) = SFO_Localizer(thePath,listName,sName,sNum,S,1, 1);
     
     checkEmpty = isempty(dir (saveName));
     suffix = 1;
     while checkEmpty ~=1
         suffix = suffix+1;
-        saveName = ['ONLoc_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        saveName = ['SFOLoc_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
         checkEmpty = isempty(dir (saveName));
     end
     
@@ -163,6 +186,21 @@ elseif testType == 4
     end
 
     eval(['save ' fullfile(S.subData, saveName)]);   
+elseif testType == 5
+    saveName = ['ONRMLoc' sName '_' num2str(sNum) '.mat'];
+    
+    listName = sprintf('CPLocList_%g.mat', 1+mod(sNum-1, 16));
+    CPLocDat(1) = CP_Localizer(thePath,listName,sName,sNum,S,1, 1);
+    
+    checkEmpty = isempty(dir (saveName));
+    suffix = 1;
+    while checkEmpty ~=1
+        suffix = suffix+1;
+        saveName = ['CPLoc_' sName '_' num2str(sNum) '(' num2str(suffix) ')' '.mat'];
+        checkEmpty = isempty(dir (saveName));
+    end
+    
+    save(fullfile(S.subData, saveName));
 end
 
 message = 'End of script. Press any key to exit.';

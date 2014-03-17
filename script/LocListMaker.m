@@ -6,6 +6,9 @@ ListTypes = {[1 0 2 0 1 0 3 0] [1 0 3 0 1 0 2 0] [2 0 1 0 3 0 1 0] [3 0 1 0 2 0 
 nTrials = cycleLength*nReps*nCycles;
 fixTrialsToRemove = (nTrials-1):nTrials;
 
+nCPStimsPerCond = 40;
+nCPCycles = 10;
+
 cd(thePath.list);
 for i=1:numLists
     type = 1+mod(i-1,length(ListTypes));
@@ -37,11 +40,28 @@ for i=1:numLists
     
     locList = [imgs' mat2cellByElem(imgCond)'];
 
-    save (sprintf('LocList_%g', i), 'locList');
+    save (sprintf('SFOLocList_%g', i), 'locList');
+    
+    %% make cploc list
+    CPScenePool = allScenes((sum(imgCond==1)+1):end);
+    CPScenes_h = CPScenePool(1:(2*nCPStimsPerCond));
+    
+    CPCond = [];
+    for j=1:(nCPCycles*2)
+        thisCond = 2-mod(j+i,2);
+        thisMB = [repmat(thisCond,1,nReps), zeros(1,nReps)];
+        CPCond = [CPCond thisMB];
+    end
+    
+    CPScenes = cell(size(CPCond));
+    CPScenes(CPCond==0) = {'blank.jpg'};
+    CPScenes(CPCond~=0) = CPScenes_h;
+    
+    locList = [CPScenes' mat2cellByElem(CPCond)'];
+    save (sprintf('CPLocList_%g', i), 'locList');    
 end
 
-
-      
+    
 testSessLength = 600;
 testTotalLength = 600;
 
