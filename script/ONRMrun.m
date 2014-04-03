@@ -74,49 +74,50 @@ S.blinkColor  = [0 0 0];
 Screen('TextSize', S.Window, 30);
 Screen('TextStyle', S.Window, 1);
 S.on = 1;  % Screen now on
-S.scrsz = get(S.screenNumber,'ScreenSize');
+S.scrsz = Screen('Resolution', S.screenNumber);
+
 
 
 %% info for test script
-S.ResponseRectIns = [S.scrsz(3)/2 - 250, S.scrsz(4)/2+50, S.scrsz(3)/2 + 250,  S.scrsz(4)/2+550];
-S.MaskingRectIns = [S.scrsz(3)/2 - 260, S.scrsz(4)/2+300, S.scrsz(3)/2 + 260,  S.scrsz(4)/2+550];
+S.ResponseRectIns = [S.scrsz.width/2 - 250, S.scrsz.height/2+50, S.scrsz.width/2 + 250,  S.scrsz.height/2+550];
+S.MaskingRectIns = [S.scrsz.width/2 - 260, S.scrsz.height/2+300, S.scrsz.width/2 + 260,  S.scrsz.height/2+550];
 
-S.ResponseRect = [S.scrsz(3)/2 - 250, S.scrsz(4)/2-150, S.scrsz(3)/2 + 250,  S.scrsz(4)/2+350];
-S.MaskingRect = [S.scrsz(3)/2 - 260, S.scrsz(4)/2+100, S.scrsz(3)/2 + 260,  S.scrsz(4)/2+350];
+S.ResponseRect = [S.scrsz.width/2 - 250, S.scrsz.height/2-150, S.scrsz.width/2 + 250,  S.scrsz.height/2+350];
+S.MaskingRect = [S.scrsz.width/2 - 260, S.scrsz.height/2+100, S.scrsz.width/2 + 260,  S.scrsz.height/2+350];
     
-S.responseCenter = [S.scrsz(3)/2 S.scrsz(4)/2 + 100];
+S.responseCenter = [S.scrsz.width/2 S.scrsz.height/2 + 100];
 S.responseRad = 250;
 S.respBarThickness = 10;
 
-S.respTextInsLeft = [S.scrsz(3)/2 - 280, S.scrsz(4)/2+320];
-S.respTextInsRight = [S.scrsz(3)/2 + 215, S.scrsz(4)/2+320];
+S.respTextInsLeft = [S.scrsz.width/2 - 280, S.scrsz.height/2+320];
+S.respTextInsRight = [S.scrsz.width/2 + 215, S.scrsz.height/2+320];
 
-S.respTextLeft = [S.scrsz(3)/2 - 280, S.scrsz(4)/2+120];
-S.respTextRight = [S.scrsz(3)/2 + 215, S.scrsz(4)/2+120];
-S.respStimY = S.scrsz(4)/2+150;
+S.respTextLeft = [S.scrsz.width/2 - 280, S.scrsz.height/2+120];
+S.respTextRight = [S.scrsz.width/2 + 215, S.scrsz.height/2+120];
+S.respStimY = S.scrsz.height/2+150;
 
 %% hexagons for center/periphery localizer
-S.picRad1 = 200;
-S.picRad2 = 250;
+S.picRad1 = 150;
+S.picRad2 = 180;
 radDiff = S.picRad2 - S.picRad1;
 
 %mid right
-S.hex{1} = [S.scrsz(3)/2 + S.picRad2, S.scrsz(4)/2 - S.picRad1, S.scrsz(3)/2 + S.picRad2+2*S.picRad1,  S.scrsz(4)/2+S.picRad1];
+S.hex{1} = [S.scrsz.width/2 + S.picRad2, S.scrsz.height/2 - S.picRad1, S.scrsz.width/2 + S.picRad2+2*S.picRad1,  S.scrsz.height/2+S.picRad1];
 
 % mid left
-S.hex{2} = [S.scrsz(3)/2 - S.picRad2 - 2*S.picRad1, S.scrsz(4)/2 - S.picRad1, S.scrsz(3)/2 - S.picRad2,  S.scrsz(4)/2+S.picRad1];
+S.hex{2} = [S.scrsz.width/2 - S.picRad2 - 2*S.picRad1, S.scrsz.height/2 - S.picRad1, S.scrsz.width/2 - S.picRad2,  S.scrsz.height/2+S.picRad1];
 
 % bottom right
-S.hex{3} = [S.scrsz(3)/2 + radDiff, S.scrsz(4)/2 + S.picRad2, S.scrsz(3)/2 + 2*S.picRad1 + radDiff,  S.scrsz(4)/2 + S.picRad2 + 2*S.picRad1];
+S.hex{3} = [S.scrsz.width/2 + radDiff, S.scrsz.height/2 + S.picRad2, S.scrsz.width/2 + 2*S.picRad1 + radDiff,  S.scrsz.height/2 + S.picRad2 + 2*S.picRad1];
 
 % bottom left
-S.hex{4} = [S.scrsz(3)/2 - 2*S.picRad1 - radDiff, S.scrsz(4)/2 + S.picRad2, S.scrsz(3)/2 - radDiff,  S.scrsz(4)/ 2+ S.picRad2 + 2*S.picRad1];
+S.hex{4} = [S.scrsz.width/2 - 2*S.picRad1 - radDiff, S.scrsz.height/2 + S.picRad2, S.scrsz.width/2 - radDiff,  S.scrsz.height/ 2+ S.picRad2 + 2*S.picRad1];
 
 % top right
-S.hex{5} = [S.scrsz(3)/2 + radDiff, S.scrsz(4)/2 - S.picRad2 - 2*S.picRad1, S.scrsz(3)/2 + 2*S.picRad1+ radDiff,  S.scrsz(4)/2-S.picRad2];
+S.hex{5} = [S.scrsz.width/2 + radDiff, S.scrsz.height/2 - S.picRad2 - 2*S.picRad1, S.scrsz.width/2 + 2*S.picRad1+ radDiff,  S.scrsz.height/2-S.picRad2];
 
 % top left
-S.hex{6} = [S.scrsz(3)/2 - 2*S.picRad1 - radDiff, S.scrsz(4)/2 - 2*S.picRad1 - S.picRad2, S.scrsz(3)/2 - radDiff,  S.scrsz(4)/2-S.picRad2];
+S.hex{6} = [S.scrsz.width/2 - 2*S.picRad1 - radDiff, S.scrsz.height/2 - 2*S.picRad1 - S.picRad2, S.scrsz.width/2 - radDiff,  S.scrsz.height/2-S.picRad2];
 
 %%
 S.sNum = sNum;
