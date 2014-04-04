@@ -192,7 +192,7 @@ for Trial = 1:listLength
     Screen('FrameOval', S.Window, S.responseBarColor, ResponseRect, 10);
     Screen('FillRect', S.Window,  S.screenColor, MaskingRect); %mask the bottom of the response circle
    
-    destRect = [S.scrsz(3)/2 - 200, 51, S.scrsz(3)/2 + 200, 460];
+    destRect = [scrsz(3)/2 - 200, 51, scrsz(3)/2 + 200, 460];
     Screen('DrawTexture', S.Window, picPtrs(Trial), [], destRect);
     ShowCursor('CrossHair', S.screenNumber);
     SetMouse(scrsz(3)/2, (scrsz(4)/2 + 300), S.Window);

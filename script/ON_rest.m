@@ -3,6 +3,7 @@ function theData = ON_rest(S)
 
 restTime = 612;
 
+
 ins_txt{1} =  sprintf('In this phase, you will relax for 10 minutes.  During this time, please keep your eyes open and please fixate on the fixation cross in the center of the screen.');
 Screen(S.Window,'FillRect', S.textColor);	% Blank Screen
 DrawFormattedText(S.Window, ins_txt{1},'center','center', S.screenColor, 75);
@@ -47,14 +48,14 @@ theData.totalTime = GetSecs-startTime;
 
 cd(S.subData);
 
-matName = fullfile(S.subData, ['rest_' num2str(sNum), '_date_' sName 'out.mat']);
+matName = fullfile(S.subData, ['rest_' num2str(S.sNum), '_date_' S.sName 'out.mat']);
 
 checkEmpty = isempty(dir (matName));
 suffix = 1;
 
 while checkEmpty ~=1
     suffix = suffix+1;
-    matName = fullfile(S.subData, ['rest_' num2str(sNum), '_' sName 'out(' num2str(suffix) ').mat']);
+    matName = fullfile(S.subData, ['rest_' num2str(S.sNum), '_' S.sName 'out(' num2str(suffix) ').mat']);
     checkEmpty = isempty(dir (matName));
 end
 
